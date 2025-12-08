@@ -9,6 +9,7 @@ import WatchVideo from './pages/WatchVideo';
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import UserManagement from './pages/Admin/UserManagement';
 import VideoManagement from './pages/Admin/VideoManagement';
+import NotFound from './pages/NotFound';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
@@ -139,7 +140,7 @@ function AppRoutes() {
       />
 
       <Route path="/" element={<Navigate to="/dashboard" />} />
-      <Route path="*" element={<Navigate to="/dashboard" />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
