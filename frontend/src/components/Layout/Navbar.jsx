@@ -35,6 +35,15 @@ const Navbar = () => {
                             My Videos
                         </Link>
 
+                        {user?.role === 'admin' && (
+                            <Link
+                                to="/admin"
+                                className="px-4 py-2 rounded-lg bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 hover:bg-purple-200 dark:hover:bg-purple-800 transition-colors"
+                            >
+                                🔧 Admin
+                            </Link>
+                        )}
+
                         <button
                             onClick={toggleTheme}
                             className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-hover transition-colors"

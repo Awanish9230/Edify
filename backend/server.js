@@ -11,6 +11,7 @@ import authRoutes from './routes/auth.js';
 import videoRoutes from './routes/video.js';
 import progressRoutes from './routes/progress.js';
 import streakRoutes from './routes/streak.js';
+import adminRoutes from './routes/admin.js';
 
 // Connect to database
 connectDB();
@@ -31,6 +32,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/video', videoRoutes);
 app.use('/api/progress', progressRoutes);
 app.use('/api/streak', streakRoutes);
+app.use('/api/admin', adminRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {
