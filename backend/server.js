@@ -16,6 +16,13 @@ import adminRoutes from './routes/admin.js';
 // Connect to database
 connectDB();
 
+// Auto-create admin if environment variable is set
+if (process.env.AUTO_CREATE_ADMIN === 'true') {
+    import('./scripts/createAdmin.js').catch(err => {
+        console.error('Error auto-creating admin:', err);
+    });
+}
+
 // Initialize express
 const app = express();
 
