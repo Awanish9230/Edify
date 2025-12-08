@@ -27,15 +27,17 @@ const createAdminUser = async () => {
             }
         } else {
             // Create new admin user
-            const salt = await bcrypt.genSalt(10);
-            const hashedPassword = await bcrypt.hash('awanish@123', salt);
-
             const admin = await User.create({
                 name: 'Awanish',
                 email: 'awanish@gmail.com',
-                password: hashedPassword,
+                password: 'awanish@123',
                 role: 'admin'
             });
+
+            console.log('✅ Admin user created successfully');
+            console.log('Email:', admin.email);
+            console.log('Password: awanish@123');
+            console.log('Role:', admin.role);
         }
 
         process.exit(0);
