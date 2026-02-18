@@ -137,10 +137,9 @@ The frontend will run on `http://localhost:5173`
 - Docker Compose installed
 
 ### 1. Clone the repository
-```bashgit clone <repository-url>cd LearnY
+```bashgit clone <repository-url>cd LearnY```
 
-### 2. Create a `.env` file in the root directory
-```env as given above 
+### 2. Create a `.env` file in the root directoryenv as given above 
 
 ### 3. Build and run the application using Docker Compose
 ```bash
