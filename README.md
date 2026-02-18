@@ -128,6 +128,32 @@ npm run dev
 
 The frontend will run on `http://localhost:5173`
 
+
+## 🛠️ Installation & Setup (Alternate using Docker)
+
+ ## 📋 Prerequisites
+
+- Docker installed
+- Docker Compose installed
+
+### 1. Clone the repository
+```bashgit clone <repository-url>cd LearnY
+
+### 2. Create a `.env` file in the root directory
+```env as given above 
+
+### 3. Build and run the application using Docker Compose
+```bash
+docker-compose up --build
+````
+The backend will be available at `http://localhost:5000` and the frontend at `http://localhost:5173`
+
+ ### 4. Stop the application
+```bash
+docker-compose down
+```
+
+
 ## 📖 Usage Guide
 
 ### 1. Create an Account
