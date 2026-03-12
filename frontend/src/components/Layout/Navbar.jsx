@@ -15,10 +15,10 @@ const Navbar = () => {
     return (
         <nav className="bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-100 dark:border-dark-border sticky top-0 z-50 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
+                <div className="flex justify-between items-center h-14">
                     <Link to="/" className="flex items-center space-x-2 group">
-                        <span className="text-2xl group-hover:rotate-12 transition-transform">📚</span>
-                        <span className="text-xl font-bold gradient-text">Edify</span>
+                        <span className="text-xl group-hover:rotate-6 transition-transform">📚</span>
+                        <span className="text-lg font-bold gradient-text">Edify</span>
                     </Link>
 
                     <div className="flex items-center space-x-4">

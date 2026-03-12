@@ -8,41 +8,41 @@ const Home = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative py-20 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gradient-to-b from-primary-500/10 to-transparent blur-3xl -z-10"></div>
+            <section className="relative pt-6 pb-16 lg:pt-10 lg:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="absolute top-0 left-1/4 w-full h-[500px] bg-gradient-to-br from-primary-500/10 to-purple-500/10 blur-3xl -z-10"></div>
                 
-                <div className="animate-fade-in space-y-8">
-                    <div className="inline-block px-4 py-1.5 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 text-sm font-semibold tracking-wide uppercase border border-primary-200 dark:border-primary-800">
+                <div className="animate-fade-in space-y-6 text-center lg:text-left">
+                    <div className="inline-block px-3 py-1 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 text-xs font-semibold tracking-wide uppercase border border-primary-200 dark:border-primary-800">
                         ✨ Next generation learning
                     </div>
                     
-                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
+                    <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.1]">
                         Master Any Skill with <br />
                         <span className="gradient-text">Personalized Video Learning</span>
                     </h1>
                     
-                    <p className="max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="max-w-2xl mx-auto lg:mx-0 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                         Edify helps you organize, track, and master YouTube educational content with precision. Turn passive watching into active mastery.
                     </p>
                     
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                        <Link to="/register" className="btn-primary w-full sm:w-auto text-lg px-8 py-4">
+                    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <Link to="/register" className="btn-primary w-full sm:w-auto text-base px-6 py-3 text-center">
                             Get Started for Free
                         </Link>
-                        <Link to="/login" className="btn-secondary w-full sm:w-auto text-lg px-8 py-4">
+                        <Link to="/login" className="btn-secondary w-full sm:w-auto text-base px-6 py-3 text-center">
                             Welcome Back
                         </Link>
                     </div>
                 </div>
 
-                <div className="mt-20 relative w-full max-w-5xl group">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-                    <div className="relative bg-white dark:bg-zinc-900 rounded-2xl border border-gray-200 dark:border-zinc-800 shadow-2xl overflow-hidden aspect-video flex flex-col">
+                <div className="relative w-full group animate-fade-in">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-purple-600/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+                    <div className="relative bg-white dark:bg-zinc-900 rounded-2xl border border-gray-200 dark:border-zinc-800 shadow-2xl overflow-hidden aspect-video flex flex-col transform lg:rotate-2 group-hover:rotate-0 transition-transform duration-700">
                         {/* Mock Nav */}
                         <div className="h-12 border-b border-gray-100 dark:border-zinc-800 flex items-center px-4 space-x-4">
-                            <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                            <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                            <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                            <div className="w-3 h-3 rounded-full bg-red-400/80"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-400/80"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-400/80"></div>
                         </div>
                         
                         {/* Mock Content */}
@@ -50,9 +50,9 @@ const Home = () => {
                             <div className="col-span-2 space-y-4">
                                 <div className="h-48 bg-gray-50 dark:bg-zinc-800/50 rounded-xl border border-dashed border-gray-200 dark:border-zinc-700 flex items-center justify-center overflow-hidden relative">
                                     <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-purple-500/10"></div>
-                                    <div className="text-4xl">📊</div>
+                                    <div className="text-4xl animate-bounce">📊</div>
                                     <div className="absolute bottom-4 left-4 right-4 h-2 bg-gray-200 dark:bg-zinc-700 rounded-full overflow-hidden">
-                                        <div className="w-2/3 h-full bg-primary-500"></div>
+                                        <div className="w-2/3 h-full bg-primary-500 shadow-lg shadow-primary-500/50"></div>
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-2 gap-4">
@@ -82,7 +82,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-900 via-transparent to-transparent opacity-60"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-900 via-transparent to-transparent opacity-60 pointer-events-none"></div>
                         <div className="absolute inset-x-0 bottom-0 p-8 text-left">
                             <p className="text-gray-900 dark:text-white font-bold text-2xl mb-1">Interactive Dashboard</p>
                             <p className="text-gray-600 dark:text-gray-400">Track streaks, watch time, and completion rates effortlessly.</p>
