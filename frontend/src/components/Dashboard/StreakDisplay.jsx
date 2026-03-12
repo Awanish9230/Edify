@@ -21,9 +21,9 @@ const StreakDisplay = ({ currentStreak, bestStreak, metDailyGoal }) => {
                 </div>
             </div>
 
-            <div className={`p-4 rounded-lg text-center ${metDailyGoal
-                    ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'
+            <div className={`p-4 rounded-lg text-center border transition-colors ${metDailyGoal
+                    ? 'bg-green-50 dark:bg-green-900/20 border-green-100 dark:border-green-800 text-green-700 dark:text-green-400'
+                    : 'bg-gray-50 dark:bg-zinc-900 border-gray-100 dark:border-zinc-800 text-gray-600 dark:text-gray-400'
                 }`}>
                 {metDailyGoal ? (
                     <div className="flex items-center justify-center">

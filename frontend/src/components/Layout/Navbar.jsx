@@ -13,7 +13,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-white dark:bg-dark-card shadow-lg sticky top-0 z-50">
+        <nav className="bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-gray-100 dark:border-dark-border sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     <Link to="/dashboard" className="flex items-center space-x-2">
@@ -60,7 +60,7 @@ const Navbar = () => {
                                 <span className="hidden sm:block">{user?.name}</span>
                             </button>
 
-                            <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-dark-card rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-dark-card border border-gray-100 dark:border-dark-border rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                                 <div className="p-4 border-b border-gray-200 dark:border-gray-700">
                                     <p className="font-semibold">{user?.name}</p>
                                     <p className="text-sm text-gray-600 dark:text-gray-400 truncate">{user?.email}</p>

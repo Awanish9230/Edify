@@ -88,7 +88,7 @@ const VideoList = ({ videos, onVideoClick, onVideoDeleted }) => {
                                     <div className="flex justify-between text-xs text-gray-600 dark:text-gray-400 mb-1">
                                         <span>{completionPercentage}% watched</span>
                                     </div>
-                                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div className="w-full bg-gray-100 dark:bg-zinc-800 rounded-full h-2 overflow-hidden">
                                         <div
                                             className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full transition-all duration-300"
                                             style={{ width: `${completionPercentage}%` }}

@@ -134,7 +134,7 @@ const VideoPlayer = ({ videoId, videoTitle, duration, onNext, onPrevious }) => {
     return (
         <div className="w-full">
             {showResumePrompt && (
-                <div className="mb-4 p-4 bg-primary-100 dark:bg-primary-900/30 border border-primary-400 dark:border-primary-700 rounded-lg">
+                <div className="mb-4 p-4 bg-primary-50 dark:bg-primary-950/20 border border-primary-100 dark:border-primary-900/30 rounded-lg transition-colors">
                     <p className="text-primary-800 dark:text-primary-300 mb-3">
                         ⏰ Continue watching from {Math.floor(resumeTime / 60)}:{String(Math.floor(resumeTime % 60)).padStart(2, '0')}?
                     </p>

@@ -17,7 +17,7 @@ const ProtectedRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-bg">
+      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-black transition-colors duration-300">
         <div className="text-center">
           <div className="text-6xl mb-4 animate-pulse">📚</div>
           <p className="text-gray-600 dark:text-gray-400">Loading...</p>
@@ -35,7 +35,7 @@ const AdminRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-bg">
+      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-black transition-colors duration-300">
         <div className="text-center">
           <div className="text-6xl mb-4 animate-pulse">📚</div>
           <p className="text-gray-600 dark:text-gray-400">Loading...</p>

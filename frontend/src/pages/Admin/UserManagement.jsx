@@ -54,7 +54,7 @@ const UserManagement = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-gray-50 dark:bg-dark-bg p-8">
+            <div className="min-h-screen bg-white dark:bg-black p-8 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto">
                     <div className="animate-pulse">
                         <div className="h-8 bg-gray-200 dark:bg-dark-card rounded w-1/4 mb-6"></div>
@@ -66,7 +66,7 @@ const UserManagement = () => {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 dark:bg-dark-bg p-8">
+        <div className="min-h-screen bg-white dark:bg-black p-8 transition-colors duration-300">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-8">
                     <h1 className="text-4xl font-bold mb-2">👥 User Management</h1>
@@ -97,7 +97,7 @@ const UserManagement = () => {
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                            <tbody className="divide-y divide-gray-100 dark:divide-zinc-800">
                                 {users.map((user) => (
                                     <tr key={user._id} className="hover:bg-gray-50 dark:hover:bg-dark-hover">
                                         <td className="px-6 py-4 whitespace-nowrap">

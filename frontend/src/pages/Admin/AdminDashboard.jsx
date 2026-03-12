@@ -28,7 +28,7 @@ const AdminDashboard = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-gray-50 dark:bg-dark-bg p-8">
+        <div className="min-h-screen bg-white dark:bg-black p-8 transition-colors duration-300">
                 <div className="max-w-7xl mx-auto">
                     <div className="animate-pulse space-y-6">
                         <div className="h-8 bg-gray-200 dark:bg-dark-card rounded w-1/4"></div>
