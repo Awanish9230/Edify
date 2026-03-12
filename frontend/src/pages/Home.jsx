@@ -35,14 +35,57 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Dashboard Preview / Mockup */}
                 <div className="mt-20 relative w-full max-w-5xl group">
                     <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-                    <div className="relative bg-white dark:bg-zinc-900 rounded-2xl border border-gray-200 dark:border-zinc-800 shadow-2xl overflow-hidden aspect-video flex items-center justify-center">
-                        <div className="text-6xl group-hover:scale-110 transition-transform duration-500">📚 ⚡️ 📊</div>
-                        <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/80 to-transparent text-left">
-                            <p className="text-white font-bold text-xl">Interactive Dashboard</p>
-                            <p className="text-gray-300">Track streaks, watch time, and completion rates effortlessly.</p>
+                    <div className="relative bg-white dark:bg-zinc-900 rounded-2xl border border-gray-200 dark:border-zinc-800 shadow-2xl overflow-hidden aspect-video flex flex-col">
+                        {/* Mock Nav */}
+                        <div className="h-12 border-b border-gray-100 dark:border-zinc-800 flex items-center px-4 space-x-4">
+                            <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                        </div>
+                        
+                        {/* Mock Content */}
+                        <div className="flex-1 p-6 grid grid-cols-3 gap-4">
+                            <div className="col-span-2 space-y-4">
+                                <div className="h-48 bg-gray-50 dark:bg-zinc-800/50 rounded-xl border border-dashed border-gray-200 dark:border-zinc-700 flex items-center justify-center overflow-hidden relative">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-purple-500/10"></div>
+                                    <div className="text-4xl">📊</div>
+                                    <div className="absolute bottom-4 left-4 right-4 h-2 bg-gray-200 dark:bg-zinc-700 rounded-full overflow-hidden">
+                                        <div className="w-2/3 h-full bg-primary-500"></div>
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="h-24 bg-white dark:bg-zinc-800 rounded-xl border border-gray-100 dark:border-zinc-700 p-4">
+                                        <div className="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded-lg mb-2 flex items-center justify-center">🔥</div>
+                                        <div className="h-2 w-12 bg-gray-200 dark:bg-zinc-700 rounded"></div>
+                                    </div>
+                                    <div className="h-24 bg-white dark:bg-zinc-800 rounded-xl border border-gray-100 dark:border-zinc-700 p-4">
+                                        <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg mb-2 flex items-center justify-center">⏱️</div>
+                                        <div className="h-2 w-12 bg-gray-200 dark:bg-zinc-700 rounded"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="space-y-4">
+                                <div className="h-full bg-gray-50 dark:bg-zinc-800/50 rounded-xl border border-gray-200 dark:border-zinc-700 p-4 flex flex-col space-y-3">
+                                    <div className="h-3 w-3/4 bg-gray-200 dark:bg-zinc-700 rounded"></div>
+                                    {[1,2,3,4,5].map(i => (
+                                        <div key={i} className="flex items-center space-x-2">
+                                            <div className="w-8 h-8 rounded bg-gray-200 dark:bg-zinc-700"></div>
+                                            <div className="flex-1 space-y-1">
+                                                <div className="h-2 w-full bg-gray-200 dark:bg-zinc-700 rounded"></div>
+                                                <div className="h-1.5 w-1/2 bg-gray-100 dark:bg-zinc-800 rounded"></div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-zinc-900 via-transparent to-transparent opacity-60"></div>
+                        <div className="absolute inset-x-0 bottom-0 p-8 text-left">
+                            <p className="text-gray-900 dark:text-white font-bold text-2xl mb-1">Interactive Dashboard</p>
+                            <p className="text-gray-600 dark:text-gray-400">Track streaks, watch time, and completion rates effortlessly.</p>
                         </div>
                     </div>
                 </div>
