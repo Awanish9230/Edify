@@ -9,6 +9,8 @@ import WatchVideo from './pages/WatchVideo';
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import UserManagement from './pages/Admin/UserManagement';
 import VideoManagement from './pages/Admin/VideoManagement';
+import Home from './pages/Home';
+import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 
 // Protected Route Component
@@ -73,6 +75,10 @@ function AppRoutes() {
   return (
     <Routes>
       <Route
+        path="/"
+        element={<Home />}
+      />
+      <Route
         path="/login"
         element={
           <PublicRoute>
@@ -113,6 +119,15 @@ function AppRoutes() {
         }
       />
 
+      <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        }
+      />
+
       {/* Admin Routes */}
       <Route
         path="/admin"
@@ -139,7 +154,6 @@ function AppRoutes() {
         }
       />
 
-      <Route path="/" element={<Navigate to="/dashboard" />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
