@@ -1,11 +1,11 @@
-FROM ghcr.io/railwayapp/nixpacks:ubuntu-1745885067
+FROM ghcr.io/railwayapp/nixpacks:ubuntu-1736208272
 
 ENTRYPOINT ["/bin/bash", "-l", "-c"]
 WORKDIR /app/
 
 
-COPY .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix
-RUN nix-env -if .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix && nix-collect-garbage -d
+COPY .nixpacks/nixpkgs-5624e1334b26ddc18da37e132b6fa8e93b481468.nix .nixpacks/nixpkgs-5624e1334b26ddc18da37e132b6fa8e93b481468.nix
+RUN nix-env -if .nixpacks/nixpkgs-5624e1334b26ddc18da37e132b6fa8e93b481468.nix && nix-collect-garbage -d
 
 
 ARG CI NIXPACKS_METADATA NODE_ENV NPM_CONFIG_PRODUCTION
@@ -17,7 +17,7 @@ ENV CI=$CI NIXPACKS_METADATA=$NIXPACKS_METADATA NODE_ENV=$NODE_ENV NPM_CONFIG_PR
 # install phase
 ENV NIXPACKS_PATH=/app/node_modules/.bin:$NIXPACKS_PATH
 COPY . /app/.
-RUN --mount=type=cache,id=8ULMUM2ZypI-/root/npm,target=/root/.npm npm ci
+RUN --mount=type=cache,id=OoSJR6JNZ2I-/root/npm,target=/root/.npm npm ci
 
 # build phase
 # noop
