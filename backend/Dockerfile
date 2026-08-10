@@ -1,12 +1,33 @@
-FROM node:18-alpine
+FROM ghcr.io/railwayapp/nixpacks:ubuntu-1745885067
 
-WORKDIR /app
+ENTRYPOINT ["/bin/bash", "-l", "-c"]
+WORKDIR /app/
 
-COPY package*.json ./
-RUN npm install --omit=dev
 
-COPY  . .
+COPY .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix
+RUN nix-env -if .nixpacks/nixpkgs-ffeebf0acf3ae8b29f8c7049cd911b9636efd7e7.nix && nix-collect-garbage -d
 
-EXPOSE 5000
 
-CMD ["npm","start"]
+ARG CI NIXPACKS_METADATA NODE_ENV NPM_CONFIG_PRODUCTION
+ENV CI=$CI NIXPACKS_METADATA=$NIXPACKS_METADATA NODE_ENV=$NODE_ENV NPM_CONFIG_PRODUCTION=$NPM_CONFIG_PRODUCTION
+
+# setup phase
+# noop
+
+# install phase
+ENV NIXPACKS_PATH=/app/node_modules/.bin:$NIXPACKS_PATH
+COPY . /app/.
+RUN --mount=type=cache,id=8ULMUM2ZypI-/root/npm,target=/root/.npm npm ci
+
+# build phase
+# noop
+
+
+RUN printf '\nPATH=/app/node_modules/.bin:$PATH' >> /root/.profile
+
+
+# start
+COPY . /app
+
+CMD ["npm run start"]
+
